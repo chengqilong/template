@@ -1,0 +1,71 @@
+{
+  "name": "wechat_coupon2",
+  "fileOutputDir":"../../../mpg/",
+  "copyHtmlFileOutputDirBase":"../../../../../common/themes/wap/",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "node scripts/test.js",
+    "build": "nodemon  --ignore  build  --ignore  node_modules   scripts/prod.js",
+    "dev": "nodemon   --ignore  build  --ignore  node_modules     scripts/dev.js",
+    "test_env": "nodemon --ignore  build --ignore  node_modules  scripts/test_env.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts"
+    ],
+    "resolver": "jest-pnp-resolver",
+    "setupFiles": [
+      "react-app-polyfill/jsdom"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
+    ],
+    "testEnvironment": "jsdom",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web",
+      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "web.ts",
+      "ts",
+      "web.tsx",
+      "tsx",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "mob_static_url": "http://s.mllres.com/wap/mpg/",
+  "mtest_static_url": "http://st.mllres.com/wap/mpg/",
+  "m_static_url":"https://static.mllres.com/wap/mpg/"
+}
