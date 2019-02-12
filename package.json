@@ -6,9 +6,13 @@
   "private": true,
   "scripts": {
     "test": "node scripts/test.js",
-    "build": "nodemon  --ignore  build  --ignore  node_modules   scripts/prod.js",
-    "dev": "nodemon   --ignore  build  --ignore  node_modules     scripts/dev.js",
-    "test_env": "nodemon --ignore  build --ignore  node_modules  scripts/test_env.js"
+    "build": "nodemon     scripts/prod.js",
+    "dev": "nodemon   scripts/dev.js",
+    "test_env": "nodemon  scripts/test_env.js"
+  },
+  "nodemonConfig":{
+    "ignore":["node_modules"],
+    "ext": "js json vue html css scss styl jsx"
   },
   "eslintConfig": {
     "extends": "react-app"
